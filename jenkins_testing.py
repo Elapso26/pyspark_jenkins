@@ -19,4 +19,4 @@ simpleData = (("James", "Sales", 3000,'M'),
 
 columns = ["employee_name", "department", "salary","Gender"]
 df = spark.createDataFrame(data=simpleData, schema=columns)
-df.write.csv('mycsv.csv')
+df.write.csv(path='mycsv.csv',mode="overwrite")
